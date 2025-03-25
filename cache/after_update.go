@@ -3,8 +3,8 @@ package cache
 import (
 	"sync"
 
-	"github.com/Pacific73/gorm-cache/config"
-	"github.com/Pacific73/gorm-cache/util"
+	"github.com/im-zhou/gorm-cache/config"
+	"github.com/im-zhou/gorm-cache/util"
 	"gorm.io/gorm"
 )
 

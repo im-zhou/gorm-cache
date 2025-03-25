@@ -7,20 +7,20 @@ import (
 
 	"gorm.io/gorm/logger"
 
-	"github.com/Pacific73/gorm-cache/cache"
+	"github.com/im-zhou/gorm-cache/cache"
 
-	"github.com/Pacific73/gorm-cache/config"
-	"github.com/go-redis/redis/v8"
+	"github.com/im-zhou/gorm-cache/config"
+	"github.com/redis/go-redis/v9"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
 var (
 	username     = "root"
-	password     = "Zcydf741205,."
-	databaseName = "site_reldb"
+	password     = "password"
+	databaseName = "testdb"
 	ip           = "localhost"
-	port         = "3306"
+	port         = "2002"
 )
 
 var (
@@ -47,7 +47,7 @@ func TestMain(m *testing.M) {
 	log("test setup ...")
 
 	var err error
-	//logger.Default.LogMode(logger.Info)
+	// logger.Default.LogMode(logger.Info)
 
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		username, password, ip, port, databaseName)
